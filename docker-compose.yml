@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  vulnbank-api:
+    build: .
+    container_name: vulnbank_api_backend
+    ports:
+      - "5000:5000"
+    restart: unless-stopped
+    volumes:
+      - .:/app # Allows live code editing for testing
